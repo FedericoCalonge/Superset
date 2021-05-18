@@ -1,0 +1,222 @@
+{
+  "timed_refresh_immune_slices": [],
+  "expanded_slices": {},
+  "refresh_frequency": 0,
+  "default_filters": "{\"2508\": {\"nivel_dependencia\": \"1. Total\"}, \"2510\": {\"anio\": 2020}, \"2518\": {\"nivel_tramite\": \"1. Total\"}, \"2524\": {\"nivel_dependencia\": \"1. Total\"}, \"2538\": {\"nivel_area\": \"1. Total\"}, \"2561\": {\"anio\": 2021}, \"2567\": {\"area\": [\"DIR GENERAL\"]}, \"2578\": {\"operacion\": \"TOTAL\"}}",
+  "color_scheme": "echarts5Colors",
+  "filter_scopes": {
+    "2496": {
+      "anio": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [2500, 2497, 2505, 2518, 2524, 2525]
+      },
+      "mes": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [2506, 2500, 2497, 2505, 2518, 2521, 2524, 2525]
+      }
+    },
+    "2508": {
+      "nivel_dependencia": {
+        "scope": ["TAB-KXRWvhPz_2"],
+        "immune": [2510, 2520, 2516, 2507, 2517, 2511, 2513, 2509]
+      }
+    },
+    "2510": {
+      "anio": {"scope": ["TAB-KXRWvhPz_2"], "immune": [2513, 2509, 2508, 2512]},
+      "mes": {
+        "scope": ["TAB-KXRWvhPz_2"],
+        "immune": [2513, 2509, 2508, 2512, 2515]
+      }
+    },
+    "2512": {
+      "area": {
+        "scope": ["TAB-KXRWvhPz_2"],
+        "immune": [2510, 2520, 2516, 2507, 2517, 2511, 2513, 2509, 2508]
+      }
+    },
+    "2518": {
+      "nivel_tramite": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [
+          2496,
+          2506,
+          2498,
+          2499,
+          2501,
+          2503,
+          2502,
+          2504,
+          2500,
+          2497,
+          2505,
+          2524,
+          2525,
+          2523,
+          2528
+        ]
+      },
+      "tramite": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [
+          2496,
+          2506,
+          2498,
+          2499,
+          2501,
+          2503,
+          2502,
+          2504,
+          2500,
+          2497,
+          2505,
+          2524,
+          2525,
+          2523,
+          2528
+        ]
+      }
+    },
+    "2519": {
+      "anio": {"scope": ["TAB-Bt-NGwtgn"], "immune": [2535, 2538, 2539, 2540]},
+      "mes": {
+        "scope": ["TAB-Bt-NGwtgn"],
+        "immune": [2535, 2536, 2538, 2539, 2540, 2541]
+      }
+    },
+    "2524": {
+      "nivel_dep": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [
+          2496,
+          2506,
+          2498,
+          2499,
+          2501,
+          2503,
+          2502,
+          2504,
+          2500,
+          2497,
+          2505,
+          2518,
+          2521,
+          2522,
+          2528
+        ]
+      }
+    },
+    "2525": {
+      "area": {
+        "scope": ["TAB-GeitrrgoQ"],
+        "immune": [
+          2496,
+          2506,
+          2498,
+          2499,
+          2501,
+          2503,
+          2502,
+          2504,
+          2500,
+          2497,
+          2505,
+          2518,
+          2521,
+          2522,
+          2524
+        ]
+      }
+    },
+    "2538": {
+      "nivel_area": {
+        "scope": ["TAB-Bt-NGwtgn"],
+        "immune": [
+          2519,
+          2526,
+          2527,
+          2529,
+          2530,
+          2531,
+          2532,
+          2533,
+          2534,
+          2535,
+          2536,
+          2554,
+          2537
+        ]
+      }
+    },
+    "2539": {
+      "area": {
+        "scope": ["TAB-Bt-NGwtgn"],
+        "immune": [
+          2519,
+          2526,
+          2527,
+          2529,
+          2530,
+          2531,
+          2532,
+          2533,
+          2534,
+          2535,
+          2536,
+          2554,
+          2537,
+          2538
+        ]
+      }
+    },
+    "2552": {
+      "mes": {"scope": ["TAB-8yBk9qRC6"], "immune": [2553, 2545, 2548, 2551]}
+    },
+    "2553": {
+      "anio": {"scope": ["TAB-8yBk9qRC6"], "immune": [2552, 2545, 2548, 2551]},
+      "mes": {"scope": ["ROOT_ID"], "immune": []}
+    },
+    "2559": {
+      "area": {
+        "scope": ["TAB-eLG7KCl-r"],
+        "immune": [
+          2570,
+          2569,
+          2571,
+          2572,
+          2555,
+          2556,
+          2573,
+          2574,
+          2557,
+          2558,
+          2568
+        ]
+      }
+    },
+    "2561": {
+      "anio": {"scope": ["TAB-wpu3TmE4A"], "immune": [2578, 2567]},
+      "mes": {
+        "scope": ["TAB-wpu3TmE4A"],
+        "immune": [2565, 2566, 2577, 2575, 2578, 2567]
+      }
+    },
+    "2567": {
+      "area": {"scope": ["TAB-wpu3TmE4A"], "immune": [2579, 2561, 2578]}
+    },
+    "2568": {
+      "anio": {"scope": ["TAB-eLG7KCl-r"], "immune": [2559]},
+      "mes": {"scope": ["TAB-eLG7KCl-r"], "immune": [2559, 2560]}
+    },
+    "2578": {"operacion": {"scope": ["TAB-wpu3TmE4A"], "immune": [2561, 2567]}}
+  },
+  "label_colors": {
+    "2019": "#b6dde8",
+    "2020": "#0070c0",
+    "Ingresadas": "#0070c0",
+    "Ingresadas, 2020": "#0070c0",
+    "Ejecutado Anterior": "#d62728",
+    "Meta Actual": "#9467bd"
+  },
+  "remote_id": 57,
+  "import_time": 1620394703
+}

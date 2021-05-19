@@ -1,51 +1,83 @@
+#Ejemplo llamado: >python3 Mod_Color.py 20 "Ingresadas"
 from requests import Session
 import sys
+import json
 
 def login():
-	#Con Session() python genera una cookie de session (es distinta a la que vemos en el navegador al darle a "Inspect")
-	response = Session().post('http://localhost:8088/api/v1/security/login', json={
+	#Con Session() python genera una cookie de session (es distinta a la que vemos en el navegador al darle a "Inspect").
+	response = Session().post('http://localhost:8088/api/v1/security/login', 
+				json = {
 	            "username": "admin",
 	            "password": "admin",
 	            "provider": "db",
 	            "refresh": "true"
-	        })
-
-	response.raise_for_status()
-	tokens = response.json()
-	#print (response, tokens)  #Devuelve 200 y 2 tokens (access_token y refresh_token)
+	        	})
+	tokens 	= response.json()
+	#print (response, tokens)  #Devuelve 200 y 2 tokens (access_token y refresh_token).
 	return tokens.get("access_token")
 
 def get_dashboard(id, access_token):
-	url_get = 'http://localhost:8088/api/v1/dashboard/' + str(id)
-	access_token_armado = "Bearer " + str(access_token)
-	response = Session().get(url_get, 
-						headers ={"authorization": access_token_armado})
-	response.raise_for_status()
-	response = response.json()
+	url_get 	= 'http://localhost:8088/api/v1/dashboard/' + str(id)
+	response 	= Session().get(url_get, 
+						headers = {"authorization": "Bearer " + str(access_token)})
+	response 	= response.json()
 	return(response)
 
-def modificar(dashboard):
-	dashboard['result']['dashboard_title']='Titulo_Modificado'
-	return dashboard
+def ElegirColor():
+    import tkinter as tk
+    from tkinter.colorchooser import askcolor
+    win = None
+    if not tk._default_root:
+        win = tk.Tk()
+        win.wm_withdraw()
+    color = askcolor()
+    if win is not None: 
+        win.destroy()
+    return color[1]
+
+def ExisteLabel(my_json,label):
+	json_metadata1 = my_json["result"]["json_metadata"]
+	json_metadata2 = json.loads(json_metadata1)
+	return label in json_metadata2["label_colors"]
+
+def assemble_json(dashboard_json):
+	#Inicializamos new_json:
+	new_json = {"css": "string","dashboard_title": "string","json_metadata": "string","position_json": "string","published": True,"slug": "string"}
+	#Carga de datos al new_json:
+	new_json["dashboard_title"] = dashboard_json['result']['dashboard_title']
+	new_json["css"] 			= dashboard_json["result"]["css"]
+	new_json['json_metadata'] 	= dashboard_json['result']['json_metadata']
+	new_json["position_json"] 	= dashboard_json["result"]["position_json"]
+	new_json["published"] 		= dashboard_json["result"]["published"]
+	new_json["slug"] 			= dashboard_json["result"]["slug"]
+	return(new_json)
 
 def put_dashboard(id, access_token,json_modificado):
-	url_put = 'http://localhost:8088/api/v1/dashboard/' + str(id)
-	Session().put(url_put,data=json_modificado,headers ={"authorization": "Bearer " + str(access_token)})
-	# probar con.... --> json={json_modificado}
+	url_put 	= 'http://localhost:8088/api/v1/dashboard/' + str(id)
+	response1 	= Session().put(url_put, json = json_modificado, headers = {"authorization": "Bearer " + str(access_token)})
+	#print(response1)
+
+def CambiarColor(dashboard_json,access_token, id_dashboard, label_a_modificar):
+	color_hexa = ElegirColor()
+	if (color_hexa is None):
+		raise ValueError('Se cancelo la modificacion de color')
+	#Modificamos el color al label_a_modificar dentro del dashboard_json:
+	json_metadata1 = dashboard_json["result"]["json_metadata"]
+	json_metadata1 = json.loads(json_metadata1)
+	json_metadata1["label_colors"][label_a_modificar] = color_hexa
+	json_string = json.dumps(json_metadata1)
+	dashboard_json["result"]["json_metadata"] = json_string
+	new_json = assemble_json(dashboard_json)
+	put_dashboard(id_dashboard,access_token,new_json)
 
 #Main:
-id_dashboard=sys.argv[1] #ID del dashboard. Integer. Se pasa por CLI.
-access_token = login()
-dashboard = get_dashboard(id_dashboard, access_token)
-print (dashboard)
-print(dashboard['result']['dashboard_title'])
-dashboard_mod = modificar(dashboard)
-print(dashboard_mod['result']['dashboard_title'])
-put_dashboard(id_dashboard,access_token,dashboard_mod)
-
-#Get al nuevo dashboard:
-dashboard_n = get_dashboard(id_dashboard, access_token)
-print("Ultimo: "+ dashboard_n['result']['dashboard_title'])
+id_dashboard 		= sys.argv[1] 		#ID del dashboard. Integer. Se pasa por CLI.
+label_a_modificar 	= sys.argv[2]	#Label del dashboard a modificar. String. Se pasa por CLI.
+access_token 		= login()
+dashboard_json 		= get_dashboard(id_dashboard, access_token)
+if not (ExisteLabel(dashboard_json,label_a_modificar)):
+	raise ValueError('No existe el label a modificar')
+CambiarColor(dashboard_json,access_token, id_dashboard, label_a_modificar)
 
 """"
 	1-Te devuelve el access_token:

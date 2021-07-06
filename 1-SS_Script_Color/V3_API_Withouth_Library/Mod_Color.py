@@ -80,9 +80,8 @@ if not (ExisteLabel(dashboard_json,label_a_modificar)):
 CambiarColor(dashboard_json,access_token, id_dashboard, label_a_modificar)
 
 """"
-	1-Te devuelve el access_token:
+1-Te devuelve el access_token:
 curl -X POST "http://localhost:8088/api/v1/security/login" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"password\":\"admin\",\"provider\":\"db\",\"refresh\":true,\"username\":\"admin\"}"
-
-	2-Usas el token: ...despues de Bearer hay que poner el access_token que devuelve arriba:
+2-Usas el token: ...despues de Bearer hay que poner el access_token que devuelve arriba:
 curl -X GET "http://localhost:8088/api/v1/query/" -H  "accept: application/json" -H  "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjEzNTAwMDQsIm5iZiI6MTYyMTM1MDAwNCwianRpIjoiMzE3MzVmMzUtNTU4Yi00NjNkLWI3YmItOWY2YjdlZThmZjAxIiwiZXhwIjoxNjIxMzUwOTA0LCJpZGVudGl0eSI6MSwiZnJlc2giOnRydWUsInR5cGUiOiJhY2Nlc3MifQ.oGXrjkjwp-OxF596BKZWP4v9dVON42H-hc9dsfQRWSk"
 """

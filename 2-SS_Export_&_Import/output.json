@@ -1,0 +1,447 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": null,
+                "dashboard_title": "Dash_Time_Series",
+                "description": null,
+                "json_metadata": "{\"remote_id\": 43, \"import_time\": 1624994319}",
+                "position_json": null,
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "birth_france_by_region",
+                            "datasource_type": "table",
+                            "id": 3618,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"supersetColors\", \"contributionMode\": \"row\", \"datasource\": \"6__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"forecastInterval\": 0.8, \"forecastPeriods\": 10, \"granularity_sqla\": \"dttm\", \"groupby\": [], \"label_colors\": {}, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"markerSize\": 6, \"metrics\": [\"avg__2004\"], \"opacity\": 0.2, \"order_desc\": true, \"rich_tooltip\": true, \"row_limit\": 10000, \"seriesType\": \"line\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"truncateYAxis\": true, \"url_params\": {}, \"viz_type\": \"echarts_timeseries\", \"xAxisLabelRotation\": 45, \"xAxisShowMaxLabel\": true, \"xAxisShowMinLabel\": true, \"x_axis_time_format\": \"smart_date\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 3618, \"datasource_name\": \"birth_france_by_region\", \"schema\": null, \"database_name\": \"examples\", \"import_time\": 1624994319}",
+                            "slice_name": "Chart_Time_Series",
+                            "viz_type": "echarts_timeseries"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "DEPT_ID",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 356,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "VARCHAR(10)",
+                            "uuid": "82c84a80-073e-4b85-8121-bf8fc98980cb",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2003",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 357,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "34872b25-fd81-4700-ac93-b4c47724e3a0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2004",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 358,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "b6abc584-c338-4a54-abfb-fc449b768081",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "dttm",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 369,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "DATE",
+                            "uuid": "0d2935e8-9e3a-46d9-a442-e5550554e8ba",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2005",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 359,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "57080b3e-d0bd-4bd9-b91b-427a50404881",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2006",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 360,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "bb8447f4-47e6-432b-ad2b-2b4c089363a5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2007",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 361,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "6081aa78-ecfc-439c-8618-a5674f1dc448",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2008",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 362,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "c241c452-b957-47dc-8faa-12e8f2daa55d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2009",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 363,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "7dee01c6-780f-48bf-b673-ae16cc69de92",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2010",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 364,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "cef9a148-a692-48f5-bd31-ecd88596e9d6",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2011",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 365,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "ca1fe139-9cbe-4acb-9baf-c87e154421b5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2012",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 366,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "69fe21da-ec14-4149-a379-7e3298ff7985",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2013",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 367,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "2c1f1345-9982-4634-821f-289cf5867afd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T20:01:52"
+                            },
+                            "column_name": "2014",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 368,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 6,
+                            "type": "BIGINT",
+                            "uuid": "97b029db-0a42-4f81-b0ac-ac56e71f4ad4",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "dttm",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "AVG(\"2004\")",
+                            "extra": null,
+                            "id": 13,
+                            "metric_name": "avg__2004",
+                            "metric_type": null,
+                            "table_id": 6,
+                            "uuid": "7d8c8977-7ea3-41a5-9f48-ca15063b94fa",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-03-15T01:17:28"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 14,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 6,
+                            "uuid": "944d6520-6f32-4c62-b35c-9fb5df54dd17",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 6, \"database_name\": \"examples\", \"import_time\": 1625599150}",
+                "schema": null,
+                "sql": null,
+                "table_name": "birth_france_by_region",
+                "template_params": null
+            }
+        }
+    ]
+}

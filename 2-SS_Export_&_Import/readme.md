@@ -1,40 +1,31 @@
 Descripcion del programa: 
+>>
+Script para ser utilizado en un ambiente 1 (PROD) y un ambiente 2 (DEV). El objetivo es poder realizar modificaciones de dashboards y sus charts asociados en DEV e importarlos en PROD; esto supone que se deberá borrar el dashboard y los charts anteriores e importar el nuevo dashboard modificado con sus charts en el ambiente donde se utilice este script. 
+Para esto se leen los dashboards exportados en formato json dentro de la carpeta 'Path_Jsons/'.
 
-Versión 1 - 1 solo entorno:
-* Nos logueamos en SS mediante la libreria superset-api-client. 
-* Test para obtener el dashboard requerido y los ids de sus charts.
-* Test para exportar un dashboard. 
-* Test para improtar un dashboard.
+		
+Al realizar la importación:
+>>
+* Si el dashboard no está creado en el ambiente de SS: Se importará el dashboard con sus charts asociados.
+* Si el dashboard está creado y tiene charts asociados en el ambiente de SS: Se borrara este dashboard y sus charts asociados y se importará la nueva versión del dashboard con sus charts asociados.
 
-Version 2 - 2 entornos (DEV y PROD):
-* Nos logueamos en SS mediante la libreria superset-api-client en ambos entornos. 
-* Obtenemos el dashboard requerido y los ids de sus charts.
-* Exportamos el dashboard de PROD.
-* Importamos el dashboard en DEV (en este proceso se deberán borrar los charts asociados al dashboard viejo para importar el nuevo).
 
->
-> Version 1: 
-> 
+Funcionamiento por pasos:
+>>
+* 1- Se exporta a mano el/los tablero/s en formato json en el ambiente 1. Y se colocan en la carpeta 'Path_Jsons/'.
+* 2- Se utiliza este script para importar el/los tableros al ambiente 2.
+* 3- Se realiza la modificación correspondiente en el ambiente 2 (se pueden modificar el/los tablero/s y/o modificar/adicionar/eliminar charts).
+* 4- Se exporta a mano el/los tablero/s en formato json en el ambiente 2.
+* 5- Se utiliza este script para importar el/los tableros al ambiente 1.
 
-Librerias a instalar:
-* 
+		
+Importante: 
+>>
+* RESTRICCION 1: LOS CHARTS NO SE COMPARTEN ENTRE DASHBOARDS.
+* RESTRICCION 2: NO PUEDEN HABER 2 DASHBOARDS CON EL MISMO TITULO / NOMBRE.	
+* Las pruebas realizadas para comprobar su funcionamiento fueron en 2 entornos, NO se debe probar exportando manualmente e importando con el script en 1 solo entorno ya que como los ids del chart son los mismos se van a borrar y el dashboard se importará vacio.
 
-Parametros utilizados (2):
-* a) ID del dashboard - Integer - Ejemplo: 20
-
-Ejemplo de utilizacion: 
-* python3 Export_Import_V1.py 20
-
->
-> Version 2:
-> 
-
-Librerias a instalar:
-* 
-
-Parametros utilizados (2):
-* a) ID del dashboard - Integer - Ejemplo: 20
-
-Ejemplo de utilizacion: 
-* python3 Export_Import_V2.py 20
+Uso: 
+>>
+* >python3 Export_Import.py
 

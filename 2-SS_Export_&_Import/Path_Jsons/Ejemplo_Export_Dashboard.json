@@ -1,0 +1,780 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Dash_Turismo_Borrar",
+                "description": null,
+                "json_metadata": "{\"remote_id\": 52, \"import_time\": 1626115240, \"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null}",
+                "position_json": "{\"CHART-07uSY06z7A\":{\"children\":[],\"id\":\"CHART-07uSY06z7A\",\"meta\":{\"chartId\":228,\"height\":50,\"sliceName\":\"Chart_Borrar_Turismo_1\",\"uuid\":\"489438ef-24cf-4920-808c-e5a45d5d23e5\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-COh90zMT3\"],\"type\":\"CHART\"},\"CHART-tvfAbNl_8o\":{\"children\":[],\"id\":\"CHART-tvfAbNl_8o\",\"meta\":{\"chartId\":227,\"height\":50,\"sliceName\":\"1258\",\"uuid\":\"c72724a8-4c9f-4e18-ab0e-7b4a205f39d7\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-COh90zMT3\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-COh90zMT3\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Dash_Turismo_Borrar\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-COh90zMT3\":{\"children\":[\"CHART-07uSY06z7A\",\"CHART-tvfAbNl_8o\"],\"id\":\"ROW-COh90zMT3\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "covid_vaccines",
+                            "datasource_type": "table",
+                            "id": 227,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"12__table\", \"header_font_size\": 0.4, \"metric\": \"count\", \"slice_id\": 157, \"subheader_font_size\": 0.15, \"time_range\": \"Last week\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 227, \"datasource_name\": \"covid_vaccines\", \"schema\": null, \"database_name\": \"examples\", \"import_time\": 1626115240}",
+                            "slice_name": "1258",
+                            "viz_type": "big_number_total"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "prueba._turismo",
+                            "datasource_type": "table",
+                            "id": 228,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"29__table\", \"extra_form_data\": {\"append_form_data\": {}, \"custom_form_data\": {}, \"override_form_data\": {}}, \"granularity_sqla\": \"fecha_concat\", \"header_font_size\": 0.4, \"metric\": \"count\", \"subheader_font_size\": 0.15, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 228, \"datasource_name\": \"_turismo\", \"schema\": \"prueba\", \"database_name\": \"examples\", \"import_time\": 1626115240}",
+                            "slice_name": "Chart_Borrar_Turismo_1",
+                            "viz_type": "big_number_total"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "id",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 630,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "BIGINT",
+                            "uuid": "dc4b927c-8fac-4121-9693-ac40639851c9",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "centro_atencion_turistica",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 631,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "TEXT",
+                            "uuid": "eb6ea910-b89a-4e1c-ba38-85ca49631141",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "pasajeros",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 632,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "BIGINT",
+                            "uuid": "b66c6775-ce8b-40e4-a8eb-cec323af01cd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 633,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "TEXT",
+                            "uuid": "ddc95523-1696-4bb6-a54e-c7d5f34adb07",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "pernoctaciones",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 634,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "BIGINT",
+                            "uuid": "b62a1f4b-8aab-40b7-8a1d-30604ac16c69",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "motivo_consulta",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 635,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "TEXT",
+                            "uuid": "da8fa6b3-69e5-4423-9e14-d3f572932f42",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "fecha_concat",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 636,
+                            "is_active": null,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "DATE",
+                            "uuid": "67046c40-ff28-45ce-a967-d820228ec61d",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "primer_dia_mes",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 637,
+                            "is_active": null,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "DATE",
+                            "uuid": "bc92abd2-b7a7-487c-a46c-a2a63c3b0906",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "anio",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 638,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "BIGINT",
+                            "uuid": "3702c733-e094-48be-89c9-cdfc4b04b9b3",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-07-12T15:24:40"
+                            },
+                            "column_name": "anio_mes_string",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 639,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 17,
+                            "type": "TEXT",
+                            "uuid": "ce14dbb4-cc08-43e2-9dc6-9d865e7e7987",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha_concat",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-06-29T12:25:49"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 25,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 17,
+                            "uuid": "57bea674-6604-4505-853d-807c51cf5daf",
+                            "verbose_name": "Cantidad Consultas",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 17, \"database_name\": \"examples\", \"import_time\": 1626115240}",
+                "schema": "prueba",
+                "sql": "",
+                "table_name": "_turismo",
+                "template_params": ""
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "clinical_stage",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": "CASE \nWHEN stage_of_development = 'Pre-clinical' THEN '0. Pre-clinical'\nWHEN stage_of_development = 'Phase I' THEN '1. Phase I' \nWHEN stage_of_development = 'Phase I/II' or stage_of_development = 'Phase II' THEN '2. Phase II or Combined I/II'\nWHEN stage_of_development = 'Phase III' THEN '3. Phase III'\nWHEN stage_of_development = 'Authorized' THEN '4. Authorized'\nEND",
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 429,
+                            "is_active": null,
+                            "is_dttm": null,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "STRING",
+                            "uuid": "0851a498-2855-46b5-886e-dc85dc94b343",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "fda_approved_indications",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 430,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "DOUBLE PRECISION",
+                            "uuid": "468f2b0f-0ef4-4e23-89f0-55798cb7bbe2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "anticipated_next_steps",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 431,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "98ee19fd-2f50-46e0-875d-1f19deb795d0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "ioc_country_code",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 432,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "c4db327d-d8e1-4c14-b9b2-dba737a2c9eb",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "clinical_trials_for_other_diseases_or_related_use",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 433,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "91554533-f9d6-4fe4-8522-76e607cbcc10",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "country_name",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 434,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "1aeca341-79e5-46f0-bafd-e9abdcfb6dbd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "product_category",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 435,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "564646aa-ab7c-4f29-a6ac-83f8dfd3a056",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "clinical_trials",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 436,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "c18e60e9-db93-415a-91fc-f14349b2b1a6",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "date_last_updated",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 437,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "49fefb44-1043-4bad-a7b2-86eb3bc6f68f",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "product_description",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 438,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "a84eec2f-b4f6-4194-8f3f-9ff6a172308a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "developer_or_researcher",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 439,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "7b081ff4-ee7f-4c91-9ad2-1590776be842",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "stage_of_development",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 440,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "bcd21902-1ac3-4dee-beff-b5fac581c743",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "funder",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 441,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "e74ca965-9539-4a2b-9b0a-00af00a1dda2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "published_results",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 442,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "906f5d6b-fb6a-4240-aa51-6a2ddfbbfaad",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "sources",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 443,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "d5922460-7ce5-4197-b228-f6633b214756",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-06-29T13:34:24"
+                            },
+                            "column_name": "treatment_vs_vaccine",
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 444,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 12,
+                            "type": "TEXT",
+                            "uuid": "098df1fc-ebdc-48a1-bbe6-4feec5985d10",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": null,
+                            "changed_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "created_by_fk": null,
+                            "created_on": {
+                                "__datetime__": "2021-04-08T15:15:31"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 20,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 12,
+                            "uuid": "ec445a84-7a9f-47ef-b648-fae54816088f",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 12, \"database_name\": \"examples\", \"import_time\": 1626115240}",
+                "schema": null,
+                "sql": "",
+                "table_name": "covid_vaccines",
+                "template_params": null
+            }
+        }
+    ]
+}

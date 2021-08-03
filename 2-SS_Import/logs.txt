@@ -1,0 +1,13 @@
+Inicio Script Importación - 2021-08-03 11:04:48
+Se crea Dashboard *prueba_dash_20julio* por primera vez junto a sus charts.
+Finaliza Script Importación - 2021-08-03 11:04:50
+ 
+Inicio Script Importación - 2021-08-03 11:06:20
+Backup realizado.
+Chart eliminado.
+Chart eliminado.
+Chart eliminado.
+Dashboard eliminado.
+Se crea Dashboard *prueba_dash_20julio* junto a sus charts.
+Finaliza Script Importación - 2021-08-03 11:06:23
+ 
